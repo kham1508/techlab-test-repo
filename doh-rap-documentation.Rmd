@@ -82,13 +82,37 @@ As there is a degree of commonality between the projects, this documentation cov
 
 `r f_borderline_small()`
 
-## Setup and structure
+## User Comments
 
-When preparing to run the code with new data, it is really important to check that the inputs are saved in the correct folder with the expected filenames, sheet names, and data in the columns / rows expected by the code.
+### User 1 Comment
 
-We recommend altering input files so that they meet the specifications of the code for the first number of times running the code until feeling sufficiently confident de-bugging errors. If inputs are likely to vary each time, it may be worth creating a template to paste data into to avoid complications running the code. If the inputs are changing long-term then it may be worth altering the code to work with the new format.
 
-The folder structure for both projects are similar. There are functions folders containing various R scripts, input folders for saving data, outputs where excel and csv files for the chart downloads are saved and the various R scripts. 
+### User 2 Comment
 
-Each time you are using the code, open the R project from your windows file explorer rather than opening R Studio. This will preserve all the relative paths and files for the project. Opening R Studio first will pull in recent files which may be from different projects or different versions of the project and may not work correctly.
+
+### User 3 Comment
+
+
+### User 4 Comment
+
+
+### User 5 Comment
+
+
+### User 6 Comment
+
+
+### User 7 Comment
+
+
+### User 8 Comment
+
+
+### User 9 Comment
+
+
+### User 10 Comment
+
+
+### User 11 Comment
 
