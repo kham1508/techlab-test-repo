@@ -1,0 +1,94 @@
+---
+title: "DoH RAP project documentation"
+lang: "en"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    code_download: no
+    css: "style.css"
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_file = paste0(
+        xfun::sans_ext(input), '-', Sys.Date(), '.html'
+        ),
+         envir = globalenv()
+        )
+        })
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+<!--Tab remove for interactive map and add tabs to table of contents-->
+
+<body onload="tabOrder()">
+
+```{r setup, include = FALSE}
+
+# this chunk sets chunk options for all chunks in this file
+knitr::opts_chunk$set(echo = FALSE) # don't include any R code in final output
+knitr::opts_chunk$set(warning = FALSE) # don't include warnings in final output
+knitr::opts_chunk$set(message= FALSE) # don't include messages in final output
+
+suppressWarnings(if(!require(pacman)) install.packages("pacman"))
+library(pacman)
+p_load("tidyverse", 
+       "plyr", "dplyr", "readr", "tidyr", "stringr", 
+       "base64enc", # for encoding images
+       "htmltools",# used for creating banner, borderline, comments boxes and two columns in Key Points
+       "lubridate", # used for formatting dates
+       "kableExtra") # for tables in documentation
+
+source("html_formatting.R")
+images_source_root = paste0(getwd(),"/images/")
+
+# NISRA logof
+nisraLogo = base64enc::dataURI(file = paste0(images_source_root,"NISRA-full-name-stacked-white.png"))
+nisraAlt = "NISRA logo"
+
+# Departmental logo
+depLogo = base64enc::dataURI(file = paste0(images_source_root,"doh_images/DOH-Full-Name-(White).PNG"))
+depAlt = "DoH logo"
+
+# Colours 
+nisra_blue = "#3878c5"
+nisra_navy = "#00205b"
+nisra_green = "#CEDC20"
+
+```
+
+`r f_banner()` <!-- calling the banner code -->
+
+<!-- Header section -->
+
+::: header
+**Theme**: Documentation <br> **Prepared by**: Tech lab
+:::
+
+<!-- Introduction section -->
+
+`r f_borderline_small()` <!-- calling the borderline code -->
+
+## Introduction
+
+This handover documentation has been prepared for the DoH quarterly child protection statistics and annual domiciliary care publications.
+
+This should be used in conjunction with the process diagrams and annotations throughout the code to understand and produce the above publications.
+
+As there is a degree of commonality between the projects, this documentation covers both publications with any differences highlighted throughout.
+
+`r f_borderline_small()`
+
+## Setup and structure
+
+When preparing to run the code with new data, it is really important to check that the inputs are saved in the correct folder with the expected filenames, sheet names, and data in the columns / rows expected by the code.
+
+We recommend altering input files so that they meet the specifications of the code for the first number of times running the code until feeling sufficiently confident de-bugging errors. If inputs are likely to vary each time, it may be worth creating a template to paste data into to avoid complications running the code. If the inputs are changing long-term then it may be worth altering the code to work with the new format.
+
+The folder structure for both projects are similar. There are functions folders containing various R scripts, input folders for saving data, outputs where excel and csv files for the chart downloads are saved and the various R scripts. 
+
+Each time you are using the code, open the R project from your windows file explorer rather than opening R Studio. This will preserve all the relative paths and files for the project. Opening R Studio first will pull in recent files which may be from different projects or different versions of the project and may not work correctly.
+

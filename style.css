@@ -1,0 +1,300 @@
+body {
+  bgcolor: #FFFFFF;
+}
+
+/* Changes font size to 12pt */
+p, li, td, th {
+  font-size: 17px;
+  color: #333333;
+}
+
+/*  Change headings to NISRA navy*/
+h1, h2, h3 {
+  color: #00205b;
+}
+
+/* Add space before h2 and h3*/
+ h2, h3 {
+  margin-top: 30px;
+}
+
+/* Make h4 bold */
+  h4 {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Change hyperlink color */
+a {
+  color: #2574a9;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #9900cc;
+}
+
+a:focus{
+  outline: 2px solid red;
+}
+
+/* Change caption to black and size 12pt */
+  caption {
+	  font-size: 120%;
+	  color: #000000;
+}
+
+/* Has the title element from YAML only appear in the metadata */
+.title {
+  display: none;
+}
+
+/* Formatting for title (margin: .67em 0;)*/
+.middle p {
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.middle {
+  width: 56%;
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #00205b;
+}
+
+/* Sets dimensions for logos in title area */
+.left, .right {
+  width: 22%;
+  padding-top: 25px;
+  background-color: #00205b;
+}
+
+/* Indents First NISRA logo from left */
+.left {
+  padding-left: 25px;
+
+}
+
+/* Indents NISRA logo from right */
+.right {
+  padding-right: 25px;
+}
+
+/* Sets dimensions for decorative elements */
+.border {
+  width: 33.33%;
+  height: 9px;
+}
+
+/* dimensions for thinner border */
+.border-fine {
+  width: 33.33%;
+  height: 5px;
+}
+
+/* Sets dimensions for subtitle */
+.findings {
+  background-color: #00205b;
+  font-size:18px;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: text-top;
+  width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row-indent {
+  width: 15px;
+}
+
+/* Styles for download buttons */
+
+.csv-button {
+  height: 35px;
+  width: 75px;
+  background-color: #12436d;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.csv-button2 {
+  height: 35px;
+  width: 200px;
+  background-color: #12436d;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.csv-button a:link,
+.csv-button a:visited,
+.csv-button a:active,
+.csv-button a:hover {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.csv-button2 a:link,
+.csv-button2 a:visited,
+.csv-button2 a:active,
+.csv-button2 a:hover {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.xl-button {
+  height: 35px;
+  width: 200px;
+  background-color: #28a197;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.xl-button2 {
+  height: 35px;
+  width: 200px;
+  background-color: #28a197;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.xl-button a:link {
+  color: #000000;
+  font-size: 16px;
+}
+
+.xl-button2 a:link,
+.xl-button2 a:visited,
+.xl-button2 a:active,
+.xl-button2 a:hover {
+  color: #000000;
+  font-size: 16px;
+}
+
+/* column boxes */
+
+.column_green {
+  float: left;
+  width: calc(33.33% - 10px);
+  margin: 5px;
+  min-height: 130px;
+  background:#FFFFFF; border:3px; border-style:solid; border-color: #28a197; padding: 1em;
+}
+
+.column_blue {
+  float: left;
+  width: calc(33.33% - 10px);
+  margin: 5px;
+  min-height: 130px;
+  background:#FFFFFF; border:3px; border-style:solid; border-color: #12436d; padding: 1em;
+}
+
+.column_red {
+  float: left;
+  width: calc(33.33% - 10px);
+  margin: 5px;
+  min-height: 130px;
+  background:#FFFFFF; border:3px; border-style:solid; border-color: #801650; padding: 1em;
+}
+
+/* clear float after columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Boxes for definitions */
+.defboxes {
+  background:#ebf2ff; border:3px; border-style:solid; border-color: #00205b; padding: 1em;
+} 
+
+/* styling tabs */
+.nav-tabs > li.active >a {
+  border-top-color: #801650; border:3px;}
+  
+  .nav-tabs>li {
+    border: 2px; border-style:solid; border-color: #ddd;
+  }
+
+/* Boxes for statuses */
+.statusbox {
+  background:#FFBCD9; border:3px; border-style:solid; border-color: #ff0000; padding: 1em;
+} 
+
+
+.statusbox_red {
+  background:#FFFFFF; border:3px; border-style:solid; border-color: #801650; padding: 1em;
+} 
+
+.statusbox_green {
+  background:#FFFFFF; border:3px; border-style:solid; border-color: #28a197; padding: 1em;
+} 
+
+.statusbox_orange {
+  background:#FFFFFF; border:3px; border-style:solid; border-color: #f46a25; padding: 1em;
+} 
+
+
+.statusbox_blue {
+  background:#FFFFFF; border:3px; border-style:solid; border-color: #12436d; padding: 1em;
+} 
+
+.statusbox_purple {
+  background:=#DDA0DD; border:3px; border-style:solid; border-color: #800080; padding: 1em;
+} 
+
+.statusbox_grey {
+  background:=#DADADA; border:3px; border-style:solid; border-color: #808080; padding: 1em;
+} 
+
+
+/* Reset styles for toc */
+.tocify-item.list-group-item a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.tocify-item.list-group-item.active a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li .tocify-item.list-group-item {
+  font-size: 120%;
+}
+
+/* Fixes hyperlink print issue */
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+  
+  /* Avoid page breaks inside plots */
+.plot-container.plotly {
+  page-break-inside: avoid;
+}
+
+
+/* Each chapter starts on new page when printing */
+h2 {
+  page-break-before: always;
+}
+
+/* Avoid page breaks across tables */
+@media print {
+  table,
+  table tr td,
+  table tr th {
+  page-break-inside: avoid;
+  }
+}
